@@ -30,6 +30,10 @@ const meteorReduxReducers = (
           []
         )
       );
+      if(!newState.reactNativeMeteorOfflineRecentlyAdded[collection])
+      {
+        newState.reactNativeMeteorOfflineRecentlyAdded[collection] = []
+      }
       newState.reactNativeMeteorOfflineRecentlyAdded[collection].push(id);
       return newState;
     }
